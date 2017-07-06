@@ -1,0 +1,16 @@
+syntax = "proto3";
+package echo;
+service Echo {
+    rpc SayHi (Request) returns (Reply) {
+    }
+}
+
+message Request {
+    string userName = 1;
+    int64 timestamp = 2;
+}
+
+message Reply {
+    string message = 1;
+    int64 timestamp = 2;
+}
